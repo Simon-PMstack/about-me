@@ -1,10 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simon Meheust — Technical Project Manager</title>
-<meta name="description" content="Simon Meheust, MSc Eng. — Technical Project Manager & Digital Transformation Consultant. Bridging business, governance and technology across finance and industry. Relocating to Central Europe." />
+<meta name="description" content="Simon Meheust, MSc Eng. — Technical Project Manager &amp; Digital Transformation Consultant. Bridging business, governance and technology across finance and industry. Relocating to Central Europe.">
 <style>
   :root {
     --navy: #0f2540; --navy2: #16324f; --accent: #2f80ed; --gold: #f2b544;
@@ -18,13 +17,16 @@
   /* HERO */
   header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, #1d3e63 100%); color: #fff; padding: 72px 0 64px; }
   .hero h1 { font-size: 2.6rem; letter-spacing: -0.5px; }
-  .hero .tagline { font-size: 1.25rem; color: #bcd0e6; margin-top: 10px; max-width: 720px; }
-  .hero .status { display: inline-block; margin-top: 22px; background: rgba(47,128,237,.18); border: 1px solid rgba(47,128,237,.55); color: #cfe2fb; padding: 7px 14px; border-radius: 999px; font-size: .9rem; }
-  .btns { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn { display: inline-block; padding: 11px 20px; border-radius: 8px; font-weight: 600; font-size: .95rem; text-decoration: none; }
-  .btn.primary { background: var(--accent); color: #fff; }
-  .btn.ghost { border: 1px solid rgba(255,255,255,.35); color: #fff; }
-  .btn:hover { opacity: .9; }
+  .hero .role { font-size: 1.25rem; color: #bcd0e6; margin-top: 10px; }
+  .hero .tagline { font-size: 1.05rem; color: #bcd0e6; margin-top: 14px; max-width: 720px; }
+  .hero .status { display: inline-block; margin-top: 22px; background: var(--accent); color: #fff; padding: 7px 14px; border-radius: 999px; font-size: .9rem; }
+  .hero .contact { margin-top: 28px; font-size: .95rem; color: #bcd0e6; line-height: 2; }
+  .hero .contact a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
+  .hero .contact a:hover { border-bottom-color: #fff; }
+  .hero .contact strong { color: #fff; }
+  .hero .contact .talk { display: block; margin-bottom: 6px; color: #bcd0e6; }
+  .cv-btn { display: inline-block; margin-top: 0; background: var(--accent); color: #fff !important; border: none; border-radius: 8px; padding: 7px 13px; font-weight: 600; font-size: .82rem; text-decoration: none; vertical-align: middle; }
+  .cv-btn:hover { opacity: .9; }
 
   section { padding: 56px 0; }
   h2 { font-size: 1.7rem; color: var(--navy); margin-bottom: 8px; }
@@ -36,17 +38,23 @@
   .card h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 8px; }
   .card p { font-size: .95rem; color: #3b4a5a; }
   .card .kicker { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-weight: 700; margin-bottom: 8px; display: block; }
+  .card u { text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
   /* CASE STUDIES */
-  .case { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 28px 30px; margin-bottom: 22px; }
-  .case h3 { color: var(--navy); font-size: 1.25rem; }
+  .rowhead { font-size: 1.15rem; color: var(--navy); margin: 34px 0 14px; border-bottom: 2px solid var(--line); padding-bottom: 8px; }
+  .rowhead:first-of-type { margin-top: 0; }
+  .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+  .case { background: var(--bg); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 26px 28px; margin-bottom: 0; display: flex; flex-direction: column; }
+  .case h3 { color: var(--navy); font-size: 1.15rem; }
   .case .meta { color: var(--muted); font-size: .88rem; margin: 4px 0 14px; }
-  .case ul { margin: 12px 0 0 20px; font-size: .95rem; color: #3b4a5a; }
+  .case p { font-size: .93rem; color: #3b4a5a; }
+  .case ul { margin: 12px 0 0 20px; font-size: .93rem; color: #3b4a5a; }
   .case li { margin-bottom: 6px; }
-  .impact { display: inline-block; margin-top: 14px; background: #eef5ff; color: #1d5bbf; font-weight: 700; font-size: .88rem; padding: 6px 12px; border-radius: 6px; }
+  .impact { margin-top: auto; padding-top: 16px; }
+  .impact span { display: inline-block; background: #eef5ff; color: #1d5bbf; font-weight: 700; font-size: .88rem; padding: 6px 12px; border-radius: 6px; margin: 4px 6px 0 0; }
 
   /* STATS */
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 18px; margin-top: 10px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 18px; margin-top: 28px; }
   .stat { background: var(--navy); color: #fff; border-radius: 12px; padding: 22px; text-align: center; }
   .stat .num { font-size: 1.9rem; font-weight: 800; color: var(--gold); }
   .stat .lbl { font-size: .85rem; color: #bcd0e6; margin-top: 4px; }
@@ -54,6 +62,8 @@
   /* PILLS */
   .pills { display: flex; flex-wrap: wrap; gap: 8px; }
   .pill { background: #eef2f7; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: .85rem; color: var(--navy2); }
+  .pill-group { margin-bottom: 16px; }
+  .pill-cat { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
 
   /* TIMELINE */
   .timeline { border-left: 3px solid var(--accent); margin-left: 8px; padding-left: 24px; }
@@ -63,7 +73,7 @@
   .tl-item .when { font-size: .82rem; color: var(--muted); font-weight: 600; }
   .tl-item p { font-size: .92rem; color: #3b4a5a; }
 
-  footer { background: var(--navy); color: #bcd0e6; padding: 36px 0; font-size: .9rem; }
+  footer { background: var(--navy); color: #bcd0e6; padding: 18px 0; font-size: .8rem; }
   footer a { color: #fff; }
   a { color: var(--accent); }
   @media (max-width: 640px) { .hero h1 { font-size: 2rem; } }
@@ -73,13 +83,13 @@
 
 <header class="hero">
   <div class="wrap">
-    <h1>Simon Meheust, MSc Eng.</h1>
-    <p class="tagline">Technical Project Manager &amp; Digital Transformation Consultant — bridging <strong>Business, Governance &amp; Technology</strong>. 17 years delivering complex programmes in Finance, Industry and Defence.</p>
-    <span class="status">📍 Relocating to Central Europe (Munich · Zurich · Luxembourg) — available immediately</span>
-    <div class="btns">
-      <a class="btn primary" href="mailto:simon.meheust@gmail.com">Email me</a>
-      <a class="btn ghost" href="#work">See my work</a>
-      <a class="btn ghost" href="#cv">Download CV (PDF)</a>
+    <h1>Simon Meheust</h1>
+    <p class="role">Technical Project Manager, MSc Eng.</p>
+    <p class="tagline">I bridge Business, Governance &amp; Technology.<br>From Industrial &amp; Business Transformation, I have been specialising in Data &amp; Tech initiatives.</p>
+    <span class="status"><b>📍 Open to Work - Munich · Frankfurt · Zurich - Available immediately</b></span>
+    <div class="contact">
+      <span class="talk"><strong>Let's talk.</strong> I'm open to Technical PM / Transformation roles across Germany and Switzerland.</span>
+      📧 <a href="mailto:simon.meheust@gmail.com">simon.meheust@gmail.com</a> &nbsp;·&nbsp; 📱 +49 160 99881755 &nbsp;·&nbsp; 💼 <a href="https://www.linkedin.com/in/simonmeheust/?locale=en-US" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;·&nbsp; <a class="cv-btn" href="Simon Meheust CV2026.pdf" download>⬇ Download CV (PDF)</a>
     </div>
   </div>
 </header>
@@ -87,22 +97,37 @@
 <section id="value">
   <div class="wrap">
     <h2>What I bring</h2>
-    <p class="sub">Three strengths recruiters and clients consistently see in how I work.</p>
+    <p class="sub">The strengths and methods my project clients consistently see in how I work.</p>
     <div class="grid">
       <div class="card">
         <span class="kicker">Stakeholder Trust</span>
-        <h3>I embed with teams, not over them</h3>
-        <p>My approach: sit down with a team for up to two weeks to understand their business reality before proposing anything. I stay on-site for deliveries to accompany users and capture feedback first-hand. Rapidly, people know my face — and they talk to me honestly.</p>
+        <h3>I embed with teams</h3>
+        <p>· Best way to draft a Business Case/PID, is to sit on the Business floor and get good understanding of their reality and anticipate underlying issues. I also stay on-site for deliveries to accompany users and capture feedback first-hand.<br>· Rapidly, people know my face — and they talk to me honestly.</p>
       </div>
       <div class="card">
-        <span class="kicker">The Bridge Role</span>
-        <h3>Business ↔ Governance ↔ Technology</h3>
-        <p>From naval defence and nuclear engineering to aeronautics and manufacturing, then London financial services. I translate boardroom intent into technical delivery, and technical constraints into decisions executives can act on — with regulatory realities built in.</p>
+        <span class="kicker">Hands-On Problem Solver</span>
+        <h3>Engineer, PMO, Agile PM</h3>
+        <p>I have hands-on experience on all aspects of change from technical delivery roles to executive reporting and taking ownership of projects / portfolio, in highly regulated environments: Manufacturing, Aeronautics, Electronics, Naval of Defence, Nuclear Engineering and Financial Services.</p>
       </div>
       <div class="card">
-        <span class="kicker">Delivery Drive</span>
-        <h3>Projects have taken me around the world</h3>
-        <p>I genuinely love projects. They've taken me across France, the UK and beyond — and the greatest satisfaction is still the moment a change lands successfully and people actually use it. That's why I stay through the hard last 20%.</p>
+        <span class="kicker">Intrapreneurship</span>
+        <h3>Results oriented</h3>
+        <p>· I genuinely love projects — the greatest satisfaction is that moment a change lands successfully and people actually use it.<br>· I accelerate project outcomes delivery by stepping in with Business &amp; IT to make requirements &amp; deliverables fit-for-purpose.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">Hybrid Agility</span>
+        <h3>PoC, Discovery, MVP, Sprints</h3>
+        <p>Waterfall where milestones and contracts demand it, Sprints where flexibility is needed, and a hybrid standard where both realities coexist.<br>I embrace change in my projects, delivering iteratively so clients get to use fast and refine their need on the way.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">Way of Working</span>
+        <h3>If it's manual, I automate it</h3>
+        <p>I continuously improve my environment, and often help colleagues to materialise the great automation ideas they may have but couldn't technically deliver.<br>Bringing simplicity and efficiency motivates me.</p>
+      </div>
+      <div class="card">
+        <span class="kicker">Governance</span>
+        <h3>Compliance as a design input</h3>
+        <p>Banking-grade experience: data protection, outsourcing, cyber, EU AI Act, ISO 42001 AI governance, Notification to Regulators, Audits.<br>I bring regulatory, risk and legal assessments into the project plan, not after it.</p>
       </div>
     </div>
   </div>
@@ -110,127 +135,160 @@
 
 <section id="work" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <h2>Selected case studies</h2>
-    <p class="sub">Anonymised where required. Full details available in interview.</p>
+    <h2>Key case studies</h2>
 
-    <div class="case">
-      <h3>GenAI Front-Office Agent: from hackathon to pilot</h3>
-      <p class="meta">International Bank · Technical Lead · 2025–2026</p>
-      <p>Championed Agentic AI as Business Technologist: ran internal AI hackathons to surface use cases, then piloted a GenAI agent for Wholesale Banking front office, coordinating integration with the enterprise data warehouse (AWS data lake) and aligning with responsible-AI principles.</p>
-      <ul>
-        <li>Established the bank's framework for developing &amp; maintaining AI products — governance, lifecycle, and path-to-production</li>
-        <li>Partnered with AWS &amp; Microsoft on design, testing and deployment</li>
-      </ul>
-      <span class="impact">AI governance aligned with ISO 42001 · POC → Pilot → Production path</span>
+    <h3 class="rowhead">GenAI and Agentic</h3>
+    <div class="case-grid">
+      <div class="case">
+        <h3>GenAI Front-Office Agent: from PoC to Pilot</h3>
+        <p class="meta">BankABC, London UK · Technical Lead · 2025–2026</p>
+        <p>Coordinated a PoC with AWS experts to demo a GenAI agent concept for the Wholesale Banking Front Office, turning early experimentation into a Project kickoff.</p>
+        <ul>
+          <li>Partnered with AWS UK Lab to Design, Share Data &amp; Test</li>
+          <li>Established the Project structure, selected vendor upon technical proposals reviews, Impact alignment on Group Data &amp; IT Roadmaps</li>
+          <li>Agreed an MVP and kicked-off discovery week for business requirements definition</li>
+        </ul>
+        <div class="impact"><span>ISO 42001 for AI Systems management</span><span>40% experimented productivity gain</span></div>
+      </div>
+      <div class="case">
+        <h3>Innovation &amp; AI Hackathons</h3>
+        <p class="meta">BankABC, London UK · Technical Lead · 2025–2026</p>
+        <p>Facilitated the bank's annual innovation events and AI hackathons to promote tech literacy and turn emerging technology ideas into delivered automation initiatives.</p>
+        <ul>
+          <li>Facilitated AI agent hackathons that surfaced and prioritised business use cases</li>
+          <li>Delivered automation initiatives with AI products: chat &amp; autonomous agents, data analysis, AI workflows</li>
+          <li>Promoted tech literacy bank-wide through annual innovation events</li>
+        </ul>
+        <div class="impact"><span>Hackathon winner: Autonomous Copilot Studio Agent to collect credit information across Front/Middle Office on trade deal proposals and recommend decisions / alerts</span></div>
+      </div>
     </div>
 
-    <div class="case">
-      <h3>Portfolio governance at scale — while growth exploded</h3>
-      <p class="meta">International Bank · Agile Project Lead &amp; PMO Manager · 2022–2025</p>
-      <p>Led a portfolio of ~30 projects (£2.5m budget), reported to SteerCo/ManCom, and mentored PMO analysts while the portfolio grew +275% and the team ramped from 6 to 10 specialists.</p>
-      <ul>
-        <li>Integrated an Agile-Waterfall hybrid model into the project standard; implemented Scrum (JIRA) and scaled it to Group level</li>
-        <li>Digitised &amp; automated FO-MO dataflows with APIs across cloud platforms and the core banking system</li>
-        <li>Guided regulatory, risk &amp; legal assessments: data protection, outsourcing, cyber, notification</li>
-      </ul>
-      <span class="impact">+275% portfolio growth absorbed without governance debt</span>
+    <h3 class="rowhead">Cloud Platforming and Data Integration</h3>
+    <div class="case-grid">
+      <div class="case">
+        <h3>Wholesale Banking CRM cloud platform (AWS)</h3>
+        <p class="meta">BankABC, London UK · Project Lead · 2022–2025</p>
+        <p>Managed Group-wide CRM Cloud platform project to digitise Front-Office activities (client pipeline / engagement, strategic summaries, credit applications / reviews / approvals).</p>
+        <ul>
+          <li>Defined Business Goals, Established the Group &amp; EU Scrum framework to iteratively build/test/ship usable components</li>
+          <li>Conducted onboarding of system (InfoSec, DPIA, IT risk assessment, ...) and vendor (procurement, SLA/OPA, ...)</li>
+          <li>Data Management &amp; Integration (master data, EDW Financials, workflows with Credit, Risk and KYC systems)</li>
+          <li>Adoption: multi-country users, executives (approvers) and administrators</li>
+        </ul>
+        <div class="impact"><span>Front-office adoption through on-site delivery support</span><span>Automation of Front-Middle collaboration activities</span></div>
+      </div>
+      <div class="case">
+        <h3>KYC APIs — Data integration into the Bank</h3>
+        <p class="meta">BankABC, London UK · Agile Project Manager · 2022–2025</p>
+        <p>Embedded the cloud-based KYC portal, integrating client data flows into the bank's ecosystem — core banking system, external Screening providers, and Lake House (Mesh).</p>
+        <ul>
+          <li>Achieved Data reliability, in coordination with the Data Governance Lead, leveraging the newly implemented DSoC (Data Side of Change) process for a structured approach</li>
+          <li>Automated dataflows with APIs, schema + DQ rules, dictionary, metadata catalog and data model + views</li>
+          <li>Accompanied Data Stewards (DQ) and System Owners, transferred JIRA Kanban Board to centrally manage BAU / Changes / Issues</li>
+        </ul>
+        <div class="impact"><span>Standardized KYC Data Product</span><span>Piloted Data Governance DSoC process</span></div>
+      </div>
     </div>
 
-    <div class="case">
-      <h3>Bank-wide portfolio management app — €200K saved</h3>
-      <p class="meta">International Bank · Technical Lead · 2025–2026</p>
-      <p>Designed and delivered the bank's digital portfolio-management application and Power BI reporting layer, replacing manual reporting and enabling data-driven decisions at senior level.</p>
-      <span class="impact">200K USD saved over 3 years</span>
+    <h3 class="rowhead">Portfolio Management</h3>
+    <div class="case-grid">
+      <div class="case">
+        <h3>£100M+ industrial programmes</h3>
+        <p class="meta">Naval Group, France · Performance Manager · 2015–2018</p>
+        <p>Programme PMO for two flagship initiatives: nuclear reactor construction (£100M transformation) and naval base rehabilitation (£108.8M business transformation).</p>
+        <ul>
+          <li>Modelled engineering production flows &amp; processes; reported KPIs (production, quality, procurement, EVM)</li>
+          <li>Consolidated programme structure: BMS, use cases, WBS, product life cycle, RACI, master plan, contract milestones</li>
+          <li>Provided inputs to the engineering Think Tank on the future of the business (Make or Buy, ...)</li>
+        </ul>
+        <div class="impact"><span>Board-level reporting on £100M+ programmes</span></div>
+      </div>
+      <div class="case">
+        <h3>Portfolio at scale — PPM App &amp; BI</h3>
+        <p class="meta">BankABC, London UK · PMO Manager · 2025–2026</p>
+        <p>Designed and delivered the bank's digital portfolio-management application and real-time Power BI reporting.</p>
+        <ul>
+          <li>Designed &amp; developed the bank-wide PPM App and Power BI layer — automated manual PMO activities</li>
+          <li>Hired and mentored PMO analysts; team ramped up from 6 to 10 specialists</li>
+          <li>Integrated an Agile-Waterfall hybrid model into the project standard; implemented Scrum (JIRA) and scaled it to Group</li>
+        </ul>
+        <div class="impact"><span>Digital PMO: 200K USD over 3 years (UK/EU only)</span><span>+275% portfolio growth without governance debt</span></div>
+      </div>
     </div>
 
-    <div class="case">
-      <h3>Wholesale Banking CRM digital programme</h3>
-      <p class="meta">International Bank · Project Lead · 2022–2025</p>
-      <p>Managed a front-office CRM digital transformation with cloud platform and data warehouse integration, balancing business dependencies with regulatory obligations — plus deposit-taking diversification projects for UK corporates and the European retail market via an aggregator.</p>
-      <span class="impact">Front-office adoption secured through on-site delivery support</span>
-    </div>
+  </div>
+</section>
 
-    <div class="case">
-      <h3>£100M+ industrial programmes: nuclear &amp; naval</h3>
-      <p class="meta">Naval Group, France · Performance Manager · 2015–2018</p>
-      <p>Programme PMO for two flagship initiatives: nuclear reactor construction (£100M transformation) and naval base rehabilitation (£108.8M). Modelled engineering production flows, reported KPIs (production, quality, procurement, EVM) to the Board, and consolidated programme structure — WBS, RACI, master plan, contract milestones.</p>
-      <p>Earlier: A320/321 assembly-line production system at Airbus (£7M programme, multi-country vendor selection) and supply-chain transformation at Canon.</p>
-      <span class="impact">Board-level reporting on £100M+ engineering programmes</span>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><div class="num">17 yrs</div><div class="lbl">delivering transformation programmes</div></div>
-      <div class="stat"><div class="num">£50M+</div><div class="lbl">largest portfolio governed</div></div>
-      <div class="stat"><div class="num">~30</div><div class="lbl">projects run simultaneously</div></div>
-      <div class="stat"><div class="num">3</div><div class="lbl">sectors: Finance, Industry, Defence</div></div>
+<section id="career" style="background:var(--bg); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <h2>Career Overview</h2>
+    <p class="sub">7+ years in London's financial sector, backed by 8-year foundation in Industrial Engineering and Operational Excellence.</p>
+    <a class="cv-btn" href="Simon Meheust CV2026.pdf" download>⬇ Download CV (PDF)</a>
+    <div class="timeline" style="margin-top:24px;">
+      <div class="tl-item">
+        <h3>Technical PM / Lead</h3>
+        <span class="when">2022 – 2026 · UK</span>
+        <p>· Automation and Digital (Data, Cloud, AI)<br>· Wholesale Banking Projects and Regulatory Changes<br>· Jurisdictions: UK, Bahrain, France, Italy, Germany</p>
+      </div>
+      <div class="tl-item">
+        <h3>PMO</h3>
+        <span class="when">2016 – 2022 · France &amp; UK</span>
+        <p>· Naval of Defence, IT Investment Banking, Change Wholesale Banking<br>· Industrial Programme up £100M and IT Portfolios RTB/CTB/Strategic</p>
+      </div>
+      <div class="tl-item">
+        <h3>Industrial Engineer</h3>
+        <span class="when">2011 – 2016 · France &amp; UK</span>
+        <p>· Lean Manufacturing, Supply Chain Automotive, S&amp;OP Optimiser<br>· Electronics, Aeronautics, Nuclear Reactor</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="how">
+<section id="credentials" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <h2>How I work</h2>
-    <p class="sub">The methods and tools I use to make complex delivery predictable.</p>
-    <div class="grid">
-      <div class="card">
-        <span class="kicker">Method</span>
-        <h3>Hybrid delivery, chosen deliberately</h3>
-        <p>Scrum &amp; PRINCE2 certified — but dogma-free. Waterfall where milestones and contracts demand it, sprints where discovery is needed, and a hybrid standard where both realities coexist (most large organisations).</p>
-      </div>
-      <div class="card">
-        <span class="kicker">Automation</span>
-        <h3>If it's manual, I automate it</h3>
-        <p>Power Platform (Apps, Automate, Copilot Studio), RPA, API integrations, SQL &amp; Power BI. Green Belt Lean Six Sigma — I improve the process before I digitise it.</p>
-      </div>
-      <div class="card">
-        <span class="kicker">Governance</span>
-        <h3>Compliance as a design input</h3>
-        <p>Banking-grade experience: data protection, outsourcing, cyber, EU AI Act, ISO 42001 AI governance. I bring regulatory, risk and legal assessments into the project plan, not after it.</p>
+    <h2>Certifications &amp; Education</h2>
+    <div class="pill-group">
+      <span class="pill-cat">Technology</span>
+      <div class="pills">
+        <span class="pill">Data Governance Fundamentals</span><span class="pill">SQL Data Associate (PostgreSQL)</span><span class="pill">Power BI Associate Data Analyst</span><span class="pill">AWS Cloud Practitioner</span><span class="pill">Data Literacy Professional</span><span class="pill">AI Fundamentals &amp; EU AI Act</span><span class="pill">GDPR &amp; Data Privacy Fundamentals</span><span class="pill">Power Platform Fundamentals</span>
       </div>
     </div>
-    <h3 style="margin:36px 0 14px; color:var(--navy);">Toolkit</h3>
-    <div class="pills">
-      <span class="pill">JIRA / Confluence</span><span class="pill">Power BI</span><span class="pill">SQL (PostgreSQL)</span><span class="pill">AWS</span><span class="pill">Microsoft Azure / M365</span><span class="pill">Copilot Studio</span><span class="pill">Power Apps &amp; Automate</span><span class="pill">GenAI &amp; Agentic AI</span><span class="pill">Scrum / PRINCE2</span><span class="pill">Lean Six Sigma (Green Belt)</span><span class="pill">EVM</span><span class="pill">Vendor negotiation</span>
+    <div class="pill-group">
+      <span class="pill-cat">Delivery</span>
+      <div class="pills">
+        <span class="pill">Professional Scrum Master (PSM-I)</span><span class="pill">Agile PRINCE2 Foundation &amp; Practitioner</span><span class="pill">Green Belt Lean Six Sigma</span>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="career" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <h2>Career</h2>
-    <p class="sub">Full CV available on request — <a href="#cv">download below</a>.</p>
-    <div class="timeline">
-      <div class="tl-item"><h3>Technical Lead — International Bank, UK</h3><span class="when">2025 – 2026</span><p>Digital solution design, AI products (GenAI &amp; agentic), data analytics and innovation for Business-driven technology change.</p></div>
-      <div class="tl-item"><h3>Agile Project Lead &amp; PMO Manager — International Bank, UK</h3><span class="when">2022 – 2025</span><p>Portfolio of ~30 projects, front-office digital transformation, PMO digitisation, Agile adoption at Group level.</p></div>
-      <div class="tl-item"><h3>PMO, CIO Office — Crédit Agricole CIB, UK</h3><span class="when">2019 – 2022</span><p>Global IT portfolio execution (£50m annual portfolio), CIO Office structuring, cost-reduction and Lean initiatives.</p></div>
-      <div class="tl-item"><h3>IT Risk PMO Analyst — Mizuho International, UK</h3><span class="when">2018 – 2019</span><p>Investment portfolio planning; £4M run + £4.5M change coordination.</p></div>
-      <div class="tl-item"><h3>Performance Manager, Programme PMO — Naval Group, France</h3><span class="when">2015 – 2018</span><p>£100M+ nuclear and naval-base transformation programmes; Board-level KPI &amp; EVM reporting.</p></div>
-      <div class="tl-item"><h3>Methods Engineer — Philips Avent, UK</h3><span class="when">2016</span><p>CRM and S&amp;OP initiatives.</p></div>
-      <div class="tl-item"><h3>Field Work Supervisor — Airbus, France</h3><span class="when">2013 – 2015</span><p>A320/321 assembly-line production system; £7M programme.</p></div>
-      <div class="tl-item"><h3>Project Coordinator — Canon, France</h3><span class="when">2011 – 2013</span><p>Manufacturing supply-chain transformation.</p></div>
+    <div class="pill-group">
+      <span class="pill-cat">Leadership</span>
+      <div class="pills">
+        <span class="pill">Emerging Leader career programme</span><span class="pill">People Management development programme</span>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="credentials">
-  <div class="wrap">
-    <h2>Certifications</h2>
-    <div class="grid">
-      <div class="card"><h3>Cloud &amp; Data</h3><p>AWS Cloud Practitioner · Microsoft Power BI Associate · SQL Data Associate (PostgreSQL) · Power Platform Fundamentals · Data Literacy &amp; AI Fundamentals (EU AI Act)</p></div>
-      <div class="card"><h3>Delivery</h3><p>Professional Scrum Master (PSM-I) · Agile PRINCE2 Foundation &amp; Practitioner · Green Belt Lean Six Sigma</p></div>
-      <div class="card"><h3>Leadership</h3><p>Emerging Leader &amp; People Management — with line-management and hiring experience for project staff</p></div>
+    <div class="pill-group" style="margin-top:26px;">
+      <span class="pill-cat">Diplomas</span>
+      <p style="color:var(--muted); font-size:.92rem;">🎓 <b>MSc Industrial Engineering</b>, ECAM Rennes (apprenticeship)<br>🎓 <b>BSc Industrial Engineering</b>, Rennes University of Technology</p>
     </div>
-    <p style="margin-top:26px; color:var(--muted); font-size:.92rem;">🎓 MSc Industrial Engineering, ECAM Rennes (apprenticeship) · BSc Industrial Engineering, Rennes University of Technology · Languages: French (native), English (fluent), Italian (basic), German (in progress, A2 target 2026)</p>
+    <div class="pill-group">
+      <span class="pill-cat">Languages</span>
+      <p style="color:var(--muted); font-size:.92rem;">
+        <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 3 2"><rect width="1" height="2" fill="#0055A4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#EF4135"/></svg> French (native) &nbsp;·&nbsp;
+        <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/></svg> English (fluent) &nbsp;·&nbsp;
+        <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 3 2"><rect width="1" height="2" fill="#008C45"/><rect x="1" width="1" height="2" fill="#F4F5F0"/><rect x="2" width="1" height="2" fill="#CD212A"/></svg> Italian (basic) &nbsp;·&nbsp;
+        <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 3 2"><rect width="3" height=".67" fill="#000"/><rect y=".67" width="3" height=".66" fill="#DD0000"/><rect y="1.33" width="3" height=".67" fill="#FFCE00"/></svg> German (in progress, B1 target Dec-26)
+      </p>
+    </div>
+    <div class="pill-group">
+      <span class="pill-cat">Passports</span>
+      <p style="color:var(--muted); font-size:.92rem;">Bi-national French &amp; British</p>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap" id="cv">
-    <p><strong>Let's talk.</strong> I'm relocating to Munich and open to Technical PM / Transformation roles across Germany, Switzerland and Luxembourg.</p>
-    <p style="margin-top:10px;">📧 <a href="mailto:simon.meheust@gmail.com">simon.meheust@gmail.com</a> &nbsp;·&nbsp; 📱 +49 160 99881755 &nbsp;·&nbsp; 💼 <a href="https://www.linkedin.com/in/simonmeheust">LinkedIn</a> &nbsp;·&nbsp; <a href="Simon-Meheust-CV-2026.pdf">Download CV (PDF)</a></p>
-    <p style="margin-top:16px; opacity:.6; font-size:.8rem;">© 2026 Simon Meheust — binational French &amp; British. Employer names anonymised where contractually required.</p>
+    <p style="opacity:.6;">© 2026 Simon Meheust</p>
   </div>
 </footer>
 
-</body>
-</html>
+</body></html>
