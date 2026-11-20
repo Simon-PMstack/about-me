@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simon Meheust — Technical Project Manager</title>
-<meta name="description" content="Simon Meheust, MSc Eng. — Technical Project Manager &amp; Digital Transformation Consultant. Bridging business, governance and technology across finance and industry. Relocating to Central Europe.">
+<meta name="description" content="Simon Meheust - Technical PM - About Me">
 <style>
   :root {
     --navy: #0f2540; --navy2: #16324f; --accent: #2f80ed; --gold: #f2b544;
@@ -17,9 +17,12 @@
   /* HERO */
   header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, #1d3e63 100%); color: #fff; padding: 72px 0 64px; }
   .hero h1 { font-size: 2.6rem; letter-spacing: -0.5px; }
-  .hero .role { font-size: 1.25rem; color: #bcd0e6; margin-top: 10px; }
-  .hero .tagline { font-size: 1.05rem; color: #bcd0e6; margin-top: 14px; max-width: 720px; }
-  .hero .status { display: inline-block; margin-top: 22px; background: var(--accent); color: #fff; padding: 7px 14px; border-radius: 999px; font-size: .9rem; }
+  .hero .role { font-size: 1.25rem; color: #bcd0e6; font-weight: 500; margin-left: 12px; }
+  .hero .tagline { font-size: 1.05rem; color: #bcd0e6; margin-top: 14px; max-width: 1020px; text-align: center; }
+  .hero .learn { margin-top: 14px; font-size: .95rem; color: #bcd0e6; text-align: center; }
+  .hero .learn a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
+  .hero .learn a:hover { border-bottom-color: #fff; }
+  .hero .status { display: block; width: fit-content; margin: 22px auto 0; background: var(--accent); color: #fff; padding: 7px 14px; border-radius: 999px; font-size: .9rem; }
   .hero .contact { margin-top: 28px; font-size: .95rem; color: #bcd0e6; line-height: 2; }
   .hero .contact a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
   .hero .contact a:hover { border-bottom-color: #fff; }
@@ -27,6 +30,13 @@
   .hero .contact .talk { display: block; margin-bottom: 6px; color: #bcd0e6; }
   .cv-btn { display: inline-block; margin-top: 0; background: var(--accent); color: #fff !important; border: none; border-radius: 8px; padding: 7px 13px; font-weight: 600; font-size: .82rem; text-decoration: none; vertical-align: middle; }
   .cv-btn:hover { opacity: .9; }
+
+  /* HERO LAYOUT + PORTRAIT */
+  .hero-top { display: flex; align-items: flex-start; gap: 56px; }
+  .hero-copy { flex: 1; min-width: 0; }
+  .portrait { flex-shrink: 0; margin-top: 76px; }
+  .portrait .ring { width: 235px; height: 235px; border-radius: 50%; padding: 6px; background: conic-gradient(from 200deg, var(--accent), var(--gold), var(--accent)); box-shadow: 0 14px 36px rgba(0,0,0,.38); }
+  .portrait img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 4px solid var(--navy2); }
 
   section { padding: 56px 0; }
   h2 { font-size: 1.7rem; color: var(--navy); margin-bottom: 8px; }
@@ -76,6 +86,11 @@
   footer { background: var(--navy); color: #bcd0e6; padding: 18px 0; font-size: .8rem; }
   footer a { color: #fff; }
   a { color: var(--accent); }
+  @media (max-width: 760px) {
+    .hero-top { flex-direction: column-reverse; align-items: flex-start; gap: 28px; }
+    .portrait { margin-top: 0; }
+    .portrait .ring { width: 175px; height: 175px; }
+  }
   @media (max-width: 640px) { .hero h1 { font-size: 2rem; } }
 </style>
 </head>
@@ -83,13 +98,23 @@
 
 <header class="hero">
   <div class="wrap">
-    <h1>Simon Meheust</h1>
-    <p class="role">Technical Project Manager, MSc Eng.</p>
-    <p class="tagline">I bridge Business, Governance &amp; Technology.<br>From Industrial &amp; Business Transformation, I have been specialising in Data &amp; Tech initiatives.</p>
-    <span class="status"><b>📍 Open to Work - Munich · Frankfurt · Zurich - Available immediately</b></span>
+    <div class="hero-top">
+      <div class="hero-copy">
+        <h1>Simon Meheust <span class="role">Technical Project Manager, MSc Eng.</span></h1>
+        <p class="tagline">Industrial Engineer with 15-year of Strategy & Transformation experience<br>at first in Aeronautics, Naval of Defence and Nuclear,<br>then specialised in Technology applied to Financial Services since 2019.</p>
+        <p class="tagline">I bridge Business, Technology &amp; Governance,<br>and my goal is to develop as an AI Solution Engineer / Forward Deployed Consultant</p>
+        <p class="learn">👨‍💻 Check my progress in AI engineering — <a href="https://github.com/Simon-PMstack/about-me/blob/main/learning/ROADMAP.md" target="_blank" rel="noopener noreferrer">roadmap &amp; (coming soon) experiments on GitHub</a></p>
+        <span class="status"><b>📍 Open to Work - Available immediately - Germany</b></span>
+      </div>
+      <div class="portrait">
+        <div class="ring">
+          <img src="professional-profile/simon-meheust-portrait.jpg" alt="Portrait of Simon Meheust" width="235" height="235">
+        </div>
+      </div>
+    </div>
     <div class="contact">
-      <span class="talk"><strong>Let's talk.</strong> I'm open to Technical PM / Transformation roles across Germany and Switzerland.</span>
-      📧 <a href="mailto:simon.meheust@gmail.com">simon.meheust@gmail.com</a> &nbsp;·&nbsp; 📱 +49 160 99881755 &nbsp;·&nbsp; 💼 <a href="https://www.linkedin.com/in/simonmeheust/?locale=en-US" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;·&nbsp; <a class="cv-btn" href="Simon Meheust CV2026.pdf" download>⬇ Download CV (PDF)</a>
+      <span class="talk"><strong>Let's talk.</strong> I'm open to Technical PM / Implementation Consultant roles.</span>
+      📧 <a href="mailto:simon.meheust@gmail.com">simon.meheust@gmail.com</a> &nbsp;·&nbsp; 📱 +49 160 99881755 &nbsp;·&nbsp; 💼 <a href="https://www.linkedin.com/in/simonmeheust/?locale=en-US" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;·&nbsp; 💻 <a href="https://github.com/Simon-PMstack" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp;·&nbsp; <a class="cv-btn" href="professional-profile/Simon-Meheust-CV2027.pdf" download>⬇ Download CV (PDF)</a>
     </div>
   </div>
 </header>
@@ -222,8 +247,8 @@
 <section id="career" style="background:var(--bg); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
     <h2>Career Overview</h2>
-    <p class="sub">7+ years in London's financial sector, backed by 8-year foundation in Industrial Engineering and Operational Excellence.</p>
-    <a class="cv-btn" href="Simon Meheust CV2026.pdf" download>⬇ Download CV (PDF)</a>
+    <p class="sub">7+ years in London's Financial sector,<br>preceded by 8-year foundation in Industrial Engineering and Operational Excellence.</p>
+    <a class="cv-btn" href="professional-profile/Simon-Meheust-CV2027.pdf" download>⬇ Download CV (PDF)</a>
     <div class="timeline" style="margin-top:24px;">
       <div class="tl-item">
         <h3>Technical PM / Lead</h3>
@@ -275,7 +300,7 @@
         <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 3 2"><rect width="1" height="2" fill="#0055A4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#EF4135"/></svg> French (native) &nbsp;·&nbsp;
         <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/></svg> English (fluent) &nbsp;·&nbsp;
         <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 3 2"><rect width="1" height="2" fill="#008C45"/><rect x="1" width="1" height="2" fill="#F4F5F0"/><rect x="2" width="1" height="2" fill="#CD212A"/></svg> Italian (basic) &nbsp;·&nbsp;
-        <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 3 2"><rect width="3" height=".67" fill="#000"/><rect y=".67" width="3" height=".66" fill="#DD0000"/><rect y="1.33" width="3" height=".67" fill="#FFCE00"/></svg> German (in progress, B1 target Dec-26)
+        <svg width="20" height="14" style="vertical-align:-2px; border-radius:2px;" viewBox="0 0 3 2"><rect width="3" height=".67" fill="#000"/><rect y=".67" width="3" height=".66" fill="#DD0000"/><rect y="1.33" width="3" height=".67" fill="#FFCE00"/></svg> German (in progress, B1 target in 2027)
       </p>
     </div>
     <div class="pill-group">
