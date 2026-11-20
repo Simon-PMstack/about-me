@@ -68,8 +68,6 @@
 | A2  | n8n automation (e.g. inbox triage, report drafting, meeting-notes-to-Jira) with an LLM step inside.                                        |            |                |      |
 |     |                                                                                                                                            |            |                |      |
 
-**Tools**: Mistral Code session, DataCamp, VS Code, Git CLI, GitHub Desktop, n8n (Cloud free tier to start), Pinecone free tier.
-
 ### Phase B - Agents, data pipelines, cloud (Mar - May 2027)
 
 **Goal**: agents that do multi-step work, plus the data-pipeline and cloud context to judge feasibility and cost.
