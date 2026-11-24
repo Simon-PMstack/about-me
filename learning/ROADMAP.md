@@ -1,25 +1,24 @@
-## GOAL: AI Solution Specialist / Forward-Deployed Program Manager
+## Framing the Roadmap
 
 ### Direction set 2026-11-18 after market research:
 
-- The enterprise bottleneck is deployment, not models: most companies run AI pilots, few reach production. The gap is integration, change management, and governance: exactly my PM skillset.
-- German demand is shifting toward "AI system owners who bridge data, AI and compliance". My EU AI Act cert and ISO 42001 exposure are direct differentiators.
-- Role family (same job, lower coding bar than FDE): AI Implementation Consultant, Deployment Strategist, AI Transformation Manager, Forward-Deployed PM, Solutions Engineer (AI).
-- Germany benchmarks (Nov 2026, SalaryExpert): AI Solutions Architect avg EUR 133k (senior 148k), Solutions Consultant 93k (senior 105k), AI Consultant 87k (senior 108k).
-- Work arrangement: employment now, consulting/freelance later.
-- I build proofs, not products. The AI Engineer tool stack is for prototyping literacy and credibility with engineers, not a career as a developer.
+- The enterprise bottleneck is deployment, not models: most companies run AI pilots, few reach production. These technologies fail on the non-AI side: legacy integration, data readiness, change management, compliance. The gap is integration, change management, and governance: exactly my PM skillset.
+- The gap in figures: only 21% of AI-using companies have a strategy, 53% have legal uncertainty around the AI Act, and most deployments remain pilot-stage rather than scaled production. McKinsey's survey shows 88% of firms use AI but only ~6% see significant EBIT impact.
+- German demand is shifting toward "AI system owners who bridge data, AI and compliance".  Benchmarks: Europe' share of AI postings is half the US shares, meaning potential ahead. AI roles are +57% YoY, whilst the rest of the job market is flat/cooling down.
+- AI-related Project Manager role family (lower coding bar than FDE): AI Implementation Consultant, Deployment Strategist, AI Transformation Manager, Forward-Deployed PM, Solutions Engineer (AI).
 
 ### Three pillars to get there:
 
-1. **Prototyping literacy**: hands-on core GenAI stack (Phases A-B).
-2. **Delivery credibility**: PMI-CPMAI, after the DataCamp AI Engineer track (mid-2027, Phase C).
-3. **Domain moat**: regulated industries + industrial engineering roots + German B1 (2027) + governance fluency.
+1. **Prototyping literacy**: hands-on core AI stack (Phases A-B) for credibility with engineers, not a career as a developer. I build proofs, not products.
+2. **Delivery credibility**: PMI-CPMAI (certified project manager of AI), after the DataCamp AI Engineering track (mid-2027, Phase C).
+3. **Domain specialisation**: regulated industries + industrial engineering roots + AI prototyping literacy + German (B1 in 2027).
 
 ### Current status
 
 - Started Nov 2026
 - Budget: 5-10 h/week
-- Last updated: 2026-11-20
+- Work arrangement: actively looking to start a technical PM role in Jan-27 in Germany
+- Last updated: 2026-11-24
 
 ### Monthly self-review (calendar, 30 min):
 
@@ -28,7 +27,7 @@
 - Who did I talk to about the target role, and what did I learn about the German market?
 - Is the next month's plan still calibrated to goal (or am I drifting into pure course-collecting)?
 
-### Certifications & training baseline (Nov 2026)
+### Certifications & training baseline (as at Nov 2026)
 
 | Certification                                           | Provider                | Date     |
 | ------------------------------------------------------- | ----------------------- | -------- |
@@ -43,21 +42,21 @@
 | Agile PRINCE2 Practitioner                              | Axelos                  | Jun 2019 |
 | Green Belt Lean Six Sigma                               | ECAM Rennes             | Jan 2018 |
 
-## Roadmap
+## Roadmap Execution
 
 ### Phase A - AI engineering core stack (Dec 2026 - Feb 2027)
 
 **Goal**: build working proofs with the core GenAI stack, end to end, twice.
 
-- [x] Git & GitHub Foundations (exam pending)
-- [ ] n8n Fundamentals (in progress)
-- [ ] Python essentials (variables, functions, collections, error handling, files, API calls)
-- [ ] AI Principles in Python
+- [x] Git & GitHub Foundations
+- [x] n8n Fundamentals
+- [ ] Python essentials: variables, functions, collections, error handling, files, API calls
 - [ ] Working with the OpenAI API
-- [ ] LLM App with LangChain
-- [ ] AI Applications with Pinecone (embeddings, chunking, RAG)
 - [ ] Hugging Face
 - [ ] LLMOps
+- [ ] AI Principles in Python
+- [ ] AI Applications with Pinecone (embeddings, chunking, RAG)
+- [ ] LLM App with LangChain
 - [ ] MCP (Model Context Protocol)
 
 **Experiments log**
@@ -93,7 +92,7 @@
 
 - [ ] PMI-CPMAI: 30h prep course + 120-question exam (target exam: Jul 2027)
 - [ ] 3 case-study write-ups from Experiments A1-B2, each as: problem -> solution -> value -> what I'd do differently
-- [ ] 5 conversations with people in the target role (mentoring coffees, German market focus)
+- [ ] 5 conversations with people in the target role (mentoring coffees, )
 
 ### Phase D - Solution specialist practice (from Aug 2027, ongoing)
 
@@ -142,4 +141,4 @@ Keep the use-case library current; retire stale ideas, add learned ones:
 
 - 2026-11-18: Roadmap created. First focus: SQL basics.
 - 2026-11-18: Refined after direction-setting with Vibe. North star adopted: AI Solution Specialist / Forward-Deployed PM. Stack-centered phases A-D added with tools, exercises and use-case library. CPMAI scheduled after DataCamp AI Engineer track (mid-2027).
-- 2026-11-20: Clean-up, simplification and corrections by Simon: "AI Engineer for Developers" track breakdown. progress update + Python strategy set.
+- 2026-11-24: Clean-up, simplification and corrections by Simon: "AI Engineer" track breakdown, clarified Python "essentials". Progress update.
